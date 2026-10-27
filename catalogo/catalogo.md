@@ -1,6 +1,6 @@
 # Catálogo – Canal Cibele Russo (USP)
 
-Total: 231 vídeos
+Total: 240 vídeos
 
 ## Análise Multivariada e Aprendizado Não-Supervisionado (36)
 
@@ -85,7 +85,7 @@ Total: 231 vídeos
 
 - [Análise Multivariada e Aprendizado Não-Supervisionado - Aula aberta](https://www.youtube.com/watch?v=cDyIRfFG2F8) 0:55:22
 
-## Estatística e Inferência (47)
+## Estatística e Inferência (49)
 
 ### Introdução à inferência estatística
 
@@ -99,6 +99,10 @@ Total: 231 vídeos
 
 - [Introdução à Inferência Estatística - Erro padrão do estimador](https://www.youtube.com/watch?v=P4pFKLxnQ4g) 0:44:16
 
+### Estimação pontual
+
+- [SME0123 Estatística I - Intro Inferência Estatística - Estimação pontual Aula de 16/10/2026](https://www.youtube.com/watch?v=zqgnGBiO4TU) 1:44:41
+
 ### Estimação por máxima verossimilhança
 
 - [Introdução Inferência Estatística - Estimador de máx verossimilhança da média e variância da Normal](https://www.youtube.com/watch?v=bJ-fqVKYxc0) 1:17:01
@@ -110,6 +114,7 @@ Total: 231 vídeos
 ### Intervalos de confiança
 
 - [Introdução à Inferência Estatística - Intervalos de confiança](https://www.youtube.com/watch?v=i2pU3jRBBdQ) 1:20:31
+- [SME0123 Estatística I - Intro Inferência Estatística - Estimação Intervalar  Aula de 27/10/2026](https://www.youtube.com/watch?v=CZj1O_mTiVE) 1:37:27
 
 ### Normalidade, TLC e teste para a média (Python/rpy2)
 
@@ -295,7 +300,7 @@ Total: 231 vídeos
 
 - [Aprendizado de máquina estatístico - Introdução a Redes neurais multicamadas - Multilayer perceptron](https://www.youtube.com/watch?v=JCEVfXhT41U) 1:05:23
 
-## Modelos de Regressão (27)
+## Modelos de Regressão (34)
 
 ### Modelos de regressão
 
@@ -309,6 +314,13 @@ Total: 231 vídeos
 
 ### EST5507 Modelos de Regressão (PIPGEs)
 
+- [EST5507 Modelos de Regressão   2026 09 29 10 04 Modelos Lineares Inferência no Caso 3](https://www.youtube.com/watch?v=Lwit5surZx8) 0:33:11
+- [EST5507 Modelos de Regressão   2026 10 16 MLGs: Estimação de parâmetros](https://www.youtube.com/watch?v=h7RsBtwtPkQ) 1:40:08
+- [EST5507 Modelos de Regressão   2026 10 23 Função desvio em MLGs e exemplos de proporção e contagem](https://www.youtube.com/watch?v=XdEJ0iW6FZU) 1:38:13
+- [EST5507 Modelos de Regressão  - Qualidade do ajuste em MLGs](https://www.youtube.com/watch?v=p4psoyyaOG4) 1:33:44
+- [EST5507 Modelos de Regressão  2026 10 13 Modelos Lineares Generalizados - Condições de regularidade](https://www.youtube.com/watch?v=LWe9dCQVdAA) 1:32:16
+- [EST5507 Modelos de Regressão  20261006 Modelo linear com matriz de planejamento de posto incompleto](https://www.youtube.com/watch?v=ftE7EAmoaaY) 1:37:35
+- [EST5507 Modelos de Regressão  20261009 Análise de diagnóstico em ML e Modelos Lineares Generalizados](https://www.youtube.com/watch?v=6ZzfysjboyE) 1:37:47
 - [EST5507 Modelos de Regressão - Apresentação da disciplina (PIPGEs)](https://www.youtube.com/watch?v=1u27-DUk5X0) 1:29:23
 - [EST5507 Modelos de Regressão - Modelo linear com erros correlacionados - Caso 2](https://www.youtube.com/watch?v=uGzTiSwLh6w) 1:23:45
 - [EST5507 Modelos de Regressão - Notação matricial derivadas vetoriais Estimador de mínimos quadrados](https://www.youtube.com/watch?v=1Snbw3BWBzU) 1:34:49
