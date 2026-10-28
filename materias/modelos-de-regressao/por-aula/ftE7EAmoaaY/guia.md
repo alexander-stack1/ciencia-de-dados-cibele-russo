@@ -78,6 +78,7 @@ Apesar de o vetor de estimadores $`\hat{\beta}^*`$ não ser único, os principai
 ```
 
 O valor de $`\hat{Y}`$ é único e idêntico para qualquer inversa generalizada $`(X^T X)^-`$.
+
 2. **Matriz Chapéu / Projeção Ortogonal ($`H`$):**
 
 ```math
@@ -85,6 +86,7 @@ H = X (X^T X)^- X^T
 ```
 
 A matriz $`H`$ é uma matriz de projeção ortogonal invariante à escolha de $`(X^T X)^-`$.
+
 3. **Soma de Quadrados dos Resíduos ($`SQRes`$):**
 
 ```math
@@ -92,6 +94,7 @@ SQRes = (Y - \hat{Y})^T (Y - \hat{Y}) = Y^T (I - H) Y
 ```
 
 Permanecendo a mesma independentemente do estimador $`\hat{\beta}^*`$ adotado.
+
 4. **Estimador da Variância do Erro ($`\hat{\sigma}^2`$):** O número de graus de liberdade associados aos resíduos ajusta-se para $`N - R`$ (onde $`R = Rank(X)`$). O estimador não viesado da variância é:
 
 ```math

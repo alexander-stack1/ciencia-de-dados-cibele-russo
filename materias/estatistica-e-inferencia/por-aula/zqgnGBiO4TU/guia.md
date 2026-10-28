@@ -53,6 +53,7 @@ L(\theta \mid x_1, \dots, x_n) = \prod_{i=1}^n f(x_i \mid \theta) \quad \text{ou
 ```
 
 *Ao igualar a zero, substitui-se o parâmetro pelo seu candidato a estimador (* *$`\hat{\theta}`$ *) e os valores observados* *$`x_i`$ *por variáveis aleatórias* *$`X_i`$ *.*
+
 * **Verificação do Ponto de Máximo:**
 * Caso unidimensional: Verificar se $`\frac{d^2 \ell(\theta)}{d\theta^2} < 0`$ avaliado em $`\hat{\theta}`$.
 * Caso multidimensional: Verificar se a Matriz Hessiana de derivadas segundas é **definida negativa** .
@@ -232,6 +233,7 @@ E\bar{X} = E\left [\frac{1}{n} \sum_{i=1}^n X_i \right ] = \frac{1}{n} \sum_{i=1
 ```
 
 Portanto, $`B(\hat{\mu}) = \mu - \mu = 0`$. O estimador $`\bar{X}`$ é **não viesado** .
+
 2. **Análise do EMV da Variância ($`\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^2`$):** Ao calcular a esperança de $`\hat{\sigma}^2`$, obtém-se:
 
 ```math
@@ -245,6 +247,7 @@ B(\hat{\sigma}^2) = E\hat{\sigma}^2 - \sigma^2 = \frac{n-1}{n}\sigma^2 - \sigma^
 ```
 
 Assim, o EMV da variância é **viesado** (subestima a variância populacional para amostras finitas), embora seja **assintoticamente não viesado** pois $`\lim_{n \to \infty} E\hat{\sigma}^2 = \sigma^2`$.
+
 3. **Mecanismo de Correção de Viés:** Para eliminar o vício, multiplica-se $`\hat{\sigma}^2`$ por $`\frac{n}{n-1}`$:
 
 ```math

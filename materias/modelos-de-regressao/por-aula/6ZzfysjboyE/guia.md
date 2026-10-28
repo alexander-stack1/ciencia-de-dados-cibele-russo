@@ -90,6 +90,7 @@ H = X(X^T X)^{-1} X^T
 ```
 
 É uma matriz de projeção ortogonal, simétrica e idempotente ($`H^2 = H`$). O $`i`$ -ésimo elemento da diagonal principal, $`h_i = h_{ii} = x_i^T (X^T X)^{-1} x_i`$, mede o grau de alavancagem da $`i`$ -ésima observação ($`0 \le h_i \le 1`$).
+
 * *Critério de corte:* Uma observação é considerada ponto de alavanca se $`h_i > 2 \bar{h}`$, onde a média é $`\bar{h} = \frac{p}{n}`$.
 * **Resíduo Ordinário:**
 
@@ -98,6 +99,7 @@ e_i = y_i - \hat{y}_i \quad \Rightarrow \quad e = (I - H)Y
 ```
 
 Possui variância não constante: $`Var(e_i) = \sigma^2 (1 - h_i)`$. A estimativa não viesada de $`\sigma^2`$ é dada pelo Erro Quadrático Médio ($`s^2 = \frac{SQ_R}{n - p}`$).
+
 * **Resíduos Estudentizados Interna e Externamente:** Para padronizar o resíduo e permitir comparações, divide-se pelo seu erro padrão:
 * *Internamente Estudentizado:*
 
@@ -122,6 +124,7 @@ D_i = \frac{(\hat{\beta} - \hat{\beta}_{(i)})^T X^T X (\hat{\beta} - \hat{\beta}
 ```
 
 Valores elevados (comparados aos quantis de uma distribuição $`F_{p, n-p}`$) indicam alta influência.
+
 * **DFFITS e DFBETAS:** Medem, respectivamente, a alteração no valor ajustado individual e a variação percentual em cada coeficiente $`\beta_j`$ específico quando a $`i`$ -ésima observação é excluída.
 * **Análise Confirmatória / Influência Global (** ***Case Deletion*** **):** Procedimento sistemático de remoção individual de casos para observar variações percentuais nas estimativas dos parâmetros e nos p-valores dos testes de hipótese estatística.
 * **Gráfico de Envelope:** Técnica baseada em simulações de Monte Carlo que projeta bandas de confiança para os resíduos estudentizados ordenados, permitindo verificar visualmente se os resíduos aderem à distribuição teórica esperada.
