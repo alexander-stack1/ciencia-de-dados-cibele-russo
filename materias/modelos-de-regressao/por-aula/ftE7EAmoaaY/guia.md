@@ -72,24 +72,34 @@ Como $`Z`$ pode assumir qualquer valor vetorial, confirma-se a existência de in
 Apesar de o vetor de estimadores $`\hat{\beta}^*`$ não ser único, os principais resultados de predição e ajuste do modelo permanecem totalmente invariantes à escolha da inversa generalizada utilizada:
 
 1. **Vetor de Valores Ajustados ($`\hat{Y}`$):**
-   ```math
-   \hat{Y} = X \hat{\beta}^* = X (X^T X)^- X^T Y
-   ```
-   O valor de $`\hat{Y}`$ é único e idêntico para qualquer inversa generalizada $`(X^T X)^-`$.
+
+```math
+\hat{Y} = X \hat{\beta}^* = X (X^T X)^- X^T Y
+```
+
+O valor de $`\hat{Y}`$ é único e idêntico para qualquer inversa generalizada $`(X^T X)^-`$.
+
 2. **Matriz Chapéu / Projeção Ortogonal ($`H`$):**
-   ```math
-   H = X (X^T X)^- X^T
-   ```
-   A matriz $`H`$ é uma matriz de projeção ortogonal invariante à escolha de $`(X^T X)^-`$.
+
+```math
+H = X (X^T X)^- X^T
+```
+
+A matriz $`H`$ é uma matriz de projeção ortogonal invariante à escolha de $`(X^T X)^-`$.
+
 3. **Soma de Quadrados dos Resíduos ($`SQRes`$):**
-   ```math
-   SQRes = (Y - \hat{Y})^T (Y - \hat{Y}) = Y^T (I - H) Y
-   ```
-   Permanecendo a mesma independentemente do estimador $`\hat{\beta}^*`$ adotado.
+
+```math
+SQRes = (Y - \hat{Y})^T (Y - \hat{Y}) = Y^T (I - H) Y
+```
+
+Permanecendo a mesma independentemente do estimador $`\hat{\beta}^*`$ adotado.
+
 4. **Estimador da Variância do Erro ($`\hat{\sigma}^2`$):** O número de graus de liberdade associados aos resíduos ajusta-se para $`N - R`$ (onde $`R = Rank(X)`$). O estimador não viesado da variância é:
-   ```math
-   \hat{\sigma}^2 = \frac{SQRes}{N - R} = Quadrado\ Médio\ do\ Resíduo\ (QMR)
-   ```
+
+```math
+\hat{\sigma}^2 = \frac{SQRes}{N - R} = Quadrado\ Médio\ do\ Resíduo\ (QMR)
+```
 
 ##### 2.4 Funções Estimáveis e o Teorema de Gauss-Markov
 
@@ -123,10 +133,12 @@ Se $`L^T \beta`$ for uma função estimável, então:
 1. O estimador dado por $`L^T \hat{\beta}^* = L^T (X^T X)^- X^T Y`$ é **único** e **invariante** a qualquer escolha de inversa generalizada $`(X^T X)^-`$.
 2. $`L^T \hat{\beta}^*`$ é o **Melhor Estimador Linear Não Viesado** (BLUE - *Best Linear Unbiased Estimator* ) de $`L^T \beta`$.
 3. A variância do estimador é dada por:
-   ```math
-   Var(L^T \hat{\beta}^*) = \sigma^2 L^T (X^T X)^- L
-   ```
-   A qual também é estritamente invariante à escolha de $`(X^T X)^-`$.
+
+```math
+Var(L^T \hat{\beta}^*) = \sigma^2 L^T (X^T X)^- L
+```
+
+A qual também é estritamente invariante à escolha de $`(X^T X)^-`$.
 
 ##### 2.5 Hipóteses Testáveis
 
@@ -156,19 +168,31 @@ y_{ij} = \mu + \beta_1 X_{1ij} + \beta_2 X_{2ij} + \beta_3 X_{3ij} + \varepsilon
 ```
 O vetor de parâmetros possui $`P = 4`$ elementos: $`\beta = \begin{bmatrix} \mu & \beta_1 & \beta_2 & \beta_3 \end{bmatrix}^T`$.
 A matriz de planejamento $`X`$ ($`6 \times 4`$) é estruturada como:
-X = \begin{bmatrix} 1 & 1 & 0 & 0 \ 1 & 1 & 0 & 0 \ 1 & 1 & 0 & 0 \ 1 & 0 & 1 & 0 \ 1 & 0 & 1 & 0 \ 1 & 0 & 0 & 1 \end{bmatrix}
+
+```math
+X = \begin{bmatrix} 1 & 1 & 0 & 0 \\ 1 & 1 & 0 & 0 \\ 1 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 1 & 0 & 1 & 0 \\ 1 & 0 & 0 & 1 \end{bmatrix}
+```
+
 
 ###### *Análise do Posto de $`X`$:*
 
 Observe que a primeira coluna de $`X`$ (referente ao intercepto $`\mu`$) é a soma exata da 2ª, 3ª e 4ª colunas. Portanto, $`Rank(X) = 3 < 4`$.
 A matriz $`X^T X`$ ($`4 \times 4`$) é calculada por:
-X^T X = \begin{bmatrix} 6 & 3 & 2 & 1 \ 3 & 3 & 0 & 0 \ 2 & 0 & 2 & 0 \ 1 & 0 & 0 & 1 \end{bmatrix}
+
+```math
+X^T X = \begin{bmatrix} 6 & 3 & 2 & 1 \\ 3 & 3 & 0 & 0 \\ 2 & 0 & 2 & 0 \\ 1 & 0 & 0 & 1 \end{bmatrix}
+```
+
 Como a primeira coluna/linha de $`X^T X`$ é a soma das três últimas, $`\det(X^T X) = 0`$. Não existe $`(X^T X)^{-1}`$ usual.
 
 ###### *Exemplo de Inversa Generalizada $`(X^T X)^-`$:*
 
 Uma solução possível para a inversa generalizada obtida por algoritmos que atribuem zeros às componentes associadas à dependência linear é:
-(X^T X)^- = \begin{bmatrix} 0 & 0 & 0 & 0 \ 0 & 1/3 & 0 & 0 \ 0 & 0 & 1/2 & 0 \ 0 & 0 & 0 & 1 \end{bmatrix}
+
+```math
+(X^T X)^- = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 1/3 & 0 & 0 \\ 0 & 0 & 1/2 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix}
+```
+
 
 ###### *Funções Estimáveis do Exemplo:*
 
