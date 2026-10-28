@@ -3,7 +3,7 @@
 
 <div align="center">
 
-![status](https://img.shields.io/badge/status-p%C3%BAblico_%E2%80%94_publicado_com_autoriza%C3%A7%C3%A3o_da_autora-brightgreen) ![licença](https://img.shields.io/badge/licen%C3%A7a-CC_BY--NC--SA_4.0-lightgrey) ![idioma](https://img.shields.io/badge/idioma-portugu%C3%AAs_%28BR%29-green) ![vídeos catalogados](https://img.shields.io/badge/v%C3%ADdeos_catalogados-231-blue) ![matérias](https://img.shields.io/badge/mat%C3%A9rias-8-purple) ![feito com](https://img.shields.io/badge/feito_com-NotebookLM-4285F4)
+![status](https://img.shields.io/badge/status-p%C3%BAblico_%E2%80%94_publicado_com_autoriza%C3%A7%C3%A3o_da_autora-brightgreen) ![licença](https://img.shields.io/badge/licen%C3%A7a-CC_BY--NC--SA_4.0-lightgrey) ![idioma](https://img.shields.io/badge/idioma-portugu%C3%AAs_%28BR%29-green) ![vídeos catalogados](https://img.shields.io/badge/v%C3%ADdeos_catalogados-240-blue) ![matérias](https://img.shields.io/badge/mat%C3%A9rias-8-purple) ![feito com](https://img.shields.io/badge/feito_com-NotebookLM-4285F4)
 
 </div>
 
@@ -39,13 +39,13 @@ flowchart TD
 
 | | Matéria | Vídeos | Do que trata | Material |
 |---|---|:-:|---|---|
-| 📊 | [Estatística e Inferência](materias/estatistica-e-inferencia/README.md) | 47 | Exploração de dados, probabilidade, estimação, intervalos e testes de hipóteses | [aulas](materias/estatistica-e-inferencia/aulas.md) · [vídeos](materias/estatistica-e-inferencia/videos.md) · [slides](materias/estatistica-e-inferencia/slides.pdf) |
+| 📊 | [Estatística e Inferência](materias/estatistica-e-inferencia/README.md) | 49 | Exploração de dados, probabilidade, estimação, intervalos e testes de hipóteses | [aulas](materias/estatistica-e-inferencia/aulas.md) · [vídeos](materias/estatistica-e-inferencia/videos.md) · [slides](materias/estatistica-e-inferencia/slides.pdf) |
 | 🧭 | [Análise Multivariada e Aprendizado Não-Supervisionado](materias/analise-multivariada/README.md) | 36 | Normal multivariada, Hotelling, MANOVA, PCA, clustering, LDA | [aulas](materias/analise-multivariada/aulas.md) · [vídeos](materias/analise-multivariada/videos.md) · [slides](materias/analise-multivariada/slides.pdf) |
 | ⚙️ | [Estatística e Otimização (CDPO)](materias/estatistica-e-otimizacao-cdpo/README.md) | 8 | Estatística e otimização para ciência de dados e pesquisa operacional | [aulas](materias/estatistica-e-otimizacao-cdpo/aulas.md) · [vídeos](materias/estatistica-e-otimizacao-cdpo/videos.md) · [slides](materias/estatistica-e-otimizacao-cdpo/slides.pdf) |
 | 🐍 | [Fundamentos de Ciência de Dados](materias/fundamentos-de-ciencia-de-dados/README.md) | 19 | Método científico, Python, NumPy/Pandas, EDA, KNN, árvores, validação | [aulas](materias/fundamentos-de-ciencia-de-dados/aulas.md) · [vídeos](materias/fundamentos-de-ciencia-de-dados/videos.md) · [slides](materias/fundamentos-de-ciencia-de-dados/slides.pdf) |
 | 🏭 | [Gestão da Qualidade](materias/gestao-da-qualidade/README.md) | 37 | Controle estatístico de processos (CEP), gráficos de controle, capacidade | [aulas](materias/gestao-da-qualidade/aulas.md) · [vídeos](materias/gestao-da-qualidade/videos.md) · [slides](materias/gestao-da-qualidade/slides.pdf) |
 | 🤖 | [Machine Learning (Aprendizado de Máquina Estatístico)](materias/machine-learning/README.md) | 11 | Classificação, métricas, ROC, KNN, logística, Naive Bayes, redes neurais | [aulas](materias/machine-learning/aulas.md) · [vídeos](materias/machine-learning/videos.md) · [slides](materias/machine-learning/slides.pdf) |
-| 📈 | [Modelos de Regressão](materias/modelos-de-regressao/README.md) | 27 | Regressão linear simples e múltipla, modelo linear geral, ANOVA, MLG | [aulas](materias/modelos-de-regressao/aulas.md) · [vídeos](materias/modelos-de-regressao/videos.md) · [slides](materias/modelos-de-regressao/slides.pdf) |
+| 📈 | [Modelos de Regressão](materias/modelos-de-regressao/README.md) | 34 | Regressão linear simples e múltipla, modelo linear geral, ANOVA, MLG | [aulas](materias/modelos-de-regressao/aulas.md) · [vídeos](materias/modelos-de-regressao/videos.md) · [slides](materias/modelos-de-regressao/slides.pdf) |
 | 🎨 | [Visualização e Exploração de Dados](materias/visualizacao-e-exploracao-de-dados/README.md) | 35 | Gráficos em R e Python, correlação, Curva de Lorenz, EDA | [aulas](materias/visualizacao-e-exploracao-de-dados/aulas.md) · [vídeos](materias/visualizacao-e-exploracao-de-dados/videos.md) · [slides](materias/visualizacao-e-exploracao-de-dados/slides.pdf) |
 
 Ficaram de fora das trilhas 11 vídeos de **Palestras e Eventos** (não são aulas), mas eles estão no [catálogo completo](catalogo/catalogo.md).
@@ -65,7 +65,7 @@ S_c^2 = \frac{(n_1 - 1)S_x^2 + (n_2 - 1)S_y^2}{n_1 + n_2 - 2}
 ├── README.md                ← você está aqui
 ├── LICENSE                  ← CC BY-NC-SA 4.0 (material derivado)
 ├── CONTRIBUTING.md
-├── catalogo/                ← catálogo dos 231 vídeos do canal (CSV e Markdown)
+├── catalogo/                ← catálogo dos 240 vídeos do canal (CSV e Markdown)
 └── materias/
     └── <materia>/
         ├── README.md        ← apresentação da trilha
