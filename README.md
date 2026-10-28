@@ -50,6 +50,13 @@ flowchart TD
 
 Ficaram de fora das trilhas 11 vídeos de **Palestras e Eventos** (não são aulas), mas eles estão no [catálogo completo](catalogo/catalogo.md).
 
+## 🗂️ Guia e slides por aula
+
+Além do material por matéria, algumas aulas têm **guia de estudo e slides próprios**, uma pasta por vídeo:
+
+- [Estatística e Inferência: por aula](materias/estatistica-e-inferencia/por-aula/README.md) (2 aulas)
+- [Modelos de Regressão: por aula](materias/modelos-de-regressao/por-aula/README.md) (7 aulas)
+
 ## 🧮 Fórmulas
 
 As fórmulas usam a sintaxe matemática nativa do GitHub, por exemplo a variância combinada:
@@ -72,6 +79,7 @@ S_c^2 = \frac{(n_1 - 1)S_x^2 + (n_2 - 1)S_y^2}{n_1 + n_2 - 2}
         ├── aulas.md         ← aulas curtas e didáticas
         ├── videos.md        ← vídeos-fonte com links
         ├── slides.pdf       ← slides do NotebookLM
+        ├── por-aula/        ← guia e slides de cada aula (quando existir)
         └── imagens/         ← prévias dos slides
 ```
 
