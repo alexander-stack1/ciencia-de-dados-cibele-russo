@@ -15,6 +15,7 @@
 | [📘 aulas.md](aulas.md) | Guia/trilha de aulas curtas e didáticas, com fórmulas renderizadas |
 | [🎬 videos.md](videos.md) | Lista dos vídeos-fonte com links para o YouTube |
 | [🖼️ slides.pdf](slides.pdf) | Apresentação de slides gerada no NotebookLM |
+| [🗂️ por-aula/](por-aula/README.md) | Guia de estudo e slides de cada aula, uma pasta por vídeo |
 
 ## 🧭 Roteiro de estudo
 
