@@ -19,10 +19,8 @@ Ao final do estudo deste material, o estudante de pós-graduação deverá ser c
 
 ##### 1. Ajuste Estatístico vs. Desempenho Preditivo
 
-| Na modelagem estatística tradicional via MLGs | o foco principal reside na **qualidade do ajuste** para verificar se o modelo proposto é adequado aos dados efetivamente observados | além de priorizar a interpretação dos parâmetros e a extrapolação controlada. |
-|---|---|---|
-| Diferentemente da modelagem preditiva (que divide bases em treino/teste | utiliza validação cruzada e avalia métricas como Erro Quadrático Médio - EQM ou Erro Absoluto Médio - EAM) | a análise de qualidade do ajuste em MLGs utiliza toda a base de dados observada. A avaliação é realizada por meio da **função desvio** e do estudo dos resíduos componentes do desvio. |
-
+Na modelagem estatística tradicional via MLGs, o foco principal reside na **qualidade do ajuste** para verificar se o modelo proposto é adequado aos dados efetivamente observados, além de priorizar a interpretação dos parâmetros e a extrapolação controlada.
+Diferentemente da modelagem preditiva (que divide bases em treino/teste, utiliza validação cruzada e avalia métricas como Erro Quadrático Médio - EQM ou Erro Absoluto Médio - EAM), a análise de qualidade do ajuste em MLGs utiliza toda a base de dados observada. A avaliação é realizada por meio da **função desvio** e do estudo dos resíduos componentes do desvio.
 
 ##### 2. O Modelo Saturado vs. O Modelo Proposto (Reduzido)
 
@@ -33,23 +31,18 @@ Para avaliar se o modelo ajustado retém informação suficiente dos dados, faz-
 
 ##### 3. Derivação Matemática da Função Desvio na Família Exponencial
 
-| A função de densidade (ou massa) de probabilidade para uma observação $`y_i`$ pertencente à família exponencial é dada por:
+A função de densidade (ou massa) de probabilidade para uma observação $`y_i`$ pertencente à família exponencial é dada por:
 ```math
-f(y_i; \theta_i | \phi) = \exp \left\{ \phi y_i \theta_i - b(\theta_i) + c(y_i | \phi) \right\}
+f(y_i; \theta_i, \phi) = \exp \left\{ \phi y_i \theta_i - b(\theta_i) + c(y_i, \phi) \right\}
 ```
-|
-|---|---|---|
-| Aplicando a função logaritmo | a $`i`$ -ésima componente da log-verossimilhança é expressa por:
+Aplicando a função logaritmo, a $`i`$ -ésima componente da log-verossimilhança é expressa por:
 ```math
-\ell_i(\mu_i \| y_i) = \phi y_i \theta_i - b(\theta_i) + c(y_i | \phi)
+\ell_i(\mu_i | y_i) = \phi y_i \theta_i - b(\theta_i) + c(y_i, \phi)
 ```
-|
-| Para a amostra completa de $`n`$ observações independentes | a log-verossimilhança é a soma de suas parcelas:
+Para a amostra completa de $`n`$ observações independentes, a log-verossimilhança é a soma de suas parcelas:
 ```math
-L(\boldsymbol{\mu}; \mathbf{y}) = \sum_{i=1}^{n} \left\{ \phi y_i \theta_i - b(\theta_i) + c(y_i | \phi) \right\}
+L(\boldsymbol{\mu}; \mathbf{y}) = \sum_{i=1}^{n} \left\{ \phi y_i \theta_i - b(\theta_i) + c(y_i, \phi) \right\}
 ```
-|
-
 
 ###### *Maximização no Modelo Saturado*
 
@@ -91,9 +84,10 @@ Para decidir se o modelo proposto é adequado, formula-se o teste de hipóteses:
 * **Regra de Decisão:** Rejeita-se $`H_0`$ se o valor observado de $`D^*`$ for excessivamente grande (maior que um crítico $`C`$). Um desvio pequeno indica bom ajuste (o modelo reduzido retém quase tanta informação quanto o saturado); um desvio grande indica mau ajuste.
 * **Distribuição de Referência:** Em geral, a distribuição exata de $`D^*`$ é desconhecida. Contudo, a literatura indica a comparação dos valores observados de $`D^*`$ com os quantis de uma distribuição Qui-Quadrado com $`n - p`$ graus de liberdade ($`\chi^2_{n-p}`$) para um nível de significância $`\alpha`$.
 * **Valor Esperado:** Se $`D^* \sim \chi^2_{n-p}`$, então o seu valor esperado é igual aos seus graus de liberdade:
-  ```math
-  ED^* = n - p
-  ```
+
+```math
+ED^* = n - p
+```
 
 ##### 5. Casos Particulares: Aplicação aos Modelos Normal e Poisson
 
@@ -102,14 +96,18 @@ Para decidir se o modelo proposto é adequado, formula-se o teste de hipóteses:
 Para o modelo Normal com variância $`\sigma^2`$ (onde $`\theta_i = \mu_i`$, $`b(\theta_i) = \frac{\theta_i^2}{2} = \frac{\mu_i^2}{2}`$ e $`\phi = \frac{1}{\sigma^2}`$):
 
 * **Deviance:**
-  ```math
-  d(\mathbf{y}, \hat{\boldsymbol{\mu}}) = 2 \sum_{i=1}^{n} \left [\left( y_i y_i - \frac{y_i^2}{2} \right) - \left( y_i \hat{\mu}_i - \frac{\hat{\mu}_i^2}{2} \right) \right ] = \sum_{i=1}^{n} (y_i - \hat{\mu}_i)^2
-  ```
+
+```math
+d(\mathbf{y}, \hat{\boldsymbol{\mu}}) = 2 \sum_{i=1}^{n} \left [\left( y_i y_i - \frac{y_i^2}{2} \right) - \left( y_i \hat{\mu}_i - \frac{\hat{\mu}_i^2}{2} \right) \right ] = \sum_{i=1}^{n} (y_i - \hat{\mu}_i)^2
+```
+
 * **Função Desvio Integrada:**
-  ```math
-  D^*(\mathbf{y}, \hat{\boldsymbol{\mu}}) = \frac{1}{\sigma^2} \sum_{i=1}^{n} (y_i - \hat{\mu}_i)^2
-  ```
-  No caso Normal, a função desvio dividida por $`\sigma^2`$ segue exatamente uma distribuição $`\chi^2_{n-p}`$. Se $`\sigma^2`$ for desconhecido, ele pode ser estimado via quadrado médio do resíduo.
+
+```math
+D^*(\mathbf{y}, \hat{\boldsymbol{\mu}}) = \frac{1}{\sigma^2} \sum_{i=1}^{n} (y_i - \hat{\mu}_i)^2
+```
+
+No caso Normal, a função desvio dividida por $`\sigma^2`$ segue exatamente uma distribuição $`\chi^2_{n-p}`$. Se $`\sigma^2`$ for desconhecido, ele pode ser estimado via quadrado médio do resíduo.
 
 ###### *B. Modelo Poisson*
 
@@ -118,26 +116,31 @@ Para o modelo Poisson (onde $`\phi = 1`$, $`\theta_i = \log(\mu_i)`$, $`b(\theta
 * No modelo saturado: $`\theta_i = \log(y_i)`$ e $`b(\theta_i) = y_i`$.
 * No modelo proposto: $`\theta_i = \log(\hat{\mu}_i)`$ e $`b(\theta_i) = \hat{\mu}_i`$.
 * **Função Desvio / Deviance:**
-  ```math
-  D^*(\mathbf{y}, \hat{\boldsymbol{\mu}}) = 2 \sum_{i=1}^{n} \left[ y_i \log(y_i) - y_i - \left( y_i \log(\hat{\mu}_i) - \hat{\mu}_i \right) \right ]
-  ```
-  ```math
-  D^*(\mathbf{y}, \hat{\boldsymbol{\mu}}) = 2 \sum_{i=1}^{n} \left[ y_i \log\left(\frac{y_i}{\hat{\mu}_i}\right) + \hat{\mu}_i - y_i \right ]
-  ```
+
+```math
+D^*(\mathbf{y}, \hat{\boldsymbol{\mu}}) = 2 \sum_{i=1}^{n} \left[ y_i \log(y_i) - y_i - \left( y_i \log(\hat{\mu}_i) - \hat{\mu}_i \right) \right ]
+```
+
+```math
+D^*(\mathbf{y}, \hat{\boldsymbol{\mu}}) = 2 \sum_{i=1}^{n} \left[ y_i \log\left(\frac{y_i}{\hat{\mu}_i}\right) + \hat{\mu}_i - y_i \right ]
+```
 
 ##### 6. Estimação de Parâmetros por Mínimos Quadrados Reponderados Iterativamente (IWLS)
 
 A estimação dos parâmetros $`\boldsymbol{\beta}`$ em MLGs não possui solução analítica em forma fechada na maioria dos casos, exigindo procedimentos iterativos como Newton-Raphson ou Score de Fisher.
 
 1. **Vetor Score $`U(\boldsymbol{\beta})`$:** Representa o gradiente do log da verossimilhança:
-   ```math
-   U(\boldsymbol{\beta}) = X^T W (Y - \boldsymbol{\mu})
-   ```
+
+```math
+U(\boldsymbol{\beta}) = X^T W (Y - \boldsymbol{\mu})
+```
+
 2. **Matriz de Informação de Fisher / Hessiana:** No método Score de Fisher, utiliza-se a esperança da matriz Hessiana, simplificando os termos pela propriedade $`EY - \boldsymbol{\mu} = 0`$.
 3. **Processo Iterativo:**
-   ```math
-   \boldsymbol{\beta}^{(k+1)} = \boldsymbol{\beta}^{(k)} + \left( X^T W^{(k)} X \right)^{-1} U\left(\boldsymbol{\beta}^{(k)}\right)
-   ```
+
+```math
+\boldsymbol{\beta}^{(k+1)} = \boldsymbol{\beta}^{(k)} + \left( X^T W^{(k)} X \right)^{-1} U\left(\boldsymbol{\beta}^{(k)}\right)
+```
 
 ###### *Exemplos de Funções de Ligação Canônica:*
 

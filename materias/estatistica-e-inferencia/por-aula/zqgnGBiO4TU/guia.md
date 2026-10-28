@@ -35,18 +35,24 @@ O método busca encontrar o valor do parâmetro que maximiza a probabilidade (ou
 ###### *Algoritmo Geral para Obtenção do EMV:*
 
 * **Construção da Função de Verossimilhança:** Para $`X_1, \dots, X_n`$ independentes e identicamente distribuídas (i.i.d.):
-  ```math
-  L(\theta \mid x_1, \dots, x_n) = \prod_{i=1}^n f(x_i \mid \theta) \quad \text{ou} \quad \prod_{i=1}^n P(X_i = x_i \mid \theta)
-  ```
+
+```math
+L(\theta \mid x_1, \dots, x_n) = \prod_{i=1}^n f(x_i \mid \theta) \quad \text{ou} \quad \prod_{i=1}^n P(X_i = x_i \mid \theta)
+```
+
 * **Aplicação do Logaritmo (Log-Verossimilhança):** Como o logaritmo natural ($`\ln`$) é uma função monótona crescente, maximizar $`L(\theta)`$ equivale a maximizar $`\ln L(\theta)`$:
-  ```math
-  \ell(\theta) = \ln L(\theta \mid x_1, \dots, x_n) = \sum_{i=1}^n \ln f(x_i \mid \theta)
-  ```
+
+```math
+\ell(\theta) = \ln L(\theta \mid x_1, \dots, x_n) = \sum_{i=1}^n \ln f(x_i \mid \theta)
+```
+
 * **Obtenção do Candidato a Estimador:** Deriva-se a log-verossimilhança em relação ao parâmetro (ou sistema de derivadas parciais no caso multiparamétrico) e iguala-se a zero:
-  ```math
-  \frac{\partial \ell(\theta)}{\partial \theta} = 0 \implies \hat{\theta}
-  ```
-  *Ao igualar a zero, substitui-se o parâmetro pelo seu candidato a estimador (* *$`\hat{\theta}`$ *) e os valores observados* *$`x_i`$ *por variáveis aleatórias* *$`X_i`$ *.*
+
+```math
+\frac{\partial \ell(\theta)}{\partial \theta} = 0 \implies \hat{\theta}
+```
+
+*Ao igualar a zero, substitui-se o parâmetro pelo seu candidato a estimador (* *$`\hat{\theta}`$ *) e os valores observados* *$`x_i`$ *por variáveis aleatórias* *$`X_i`$ *.*
 * **Verificação do Ponto de Máximo:**
 * Caso unidimensional: Verificar se $`\frac{d^2 \ell(\theta)}{d\theta^2} < 0`$ avaliado em $`\hat{\theta}`$.
 * Caso multidimensional: Verificar se a Matriz Hessiana de derivadas segundas é **definida negativa** .
@@ -58,57 +64,79 @@ O método busca encontrar o valor do parâmetro que maximiza a probabilidade (ou
 Seja $`X_1, \dots, X_n \sim N(\mu, \sigma^2)`$. Encontrar os estimadores de máxima verossimilhança para $`\mu`$ e $`\sigma^2`$.
 
 * **Função de Verossimilhança:**
-  ```math
-  L(\mu, \sigma^2) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{(x_i - \mu)^2}{2\sigma^2} \right) = (2\pi\sigma^2)^{-n/2} \exp\left( -\frac{1}{2\sigma^2} \sum_{i=1}^n (x_i - \mu)^2 \right)
-  ```
+
+```math
+L(\mu, \sigma^2) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{(x_i - \mu)^2}{2\sigma^2} \right) = (2\pi\sigma^2)^{-n/2} \exp\left( -\frac{1}{2\sigma^2} \sum_{i=1}^n (x_i - \mu)^2 \right)
+```
+
 * **Log-Verossimilhança:**
-  ```math
-  \ell(\mu, \sigma^2) = \ln L(\mu, \sigma^2) = -\frac{n}{2} \ln(2\pi\sigma^2) - \frac{1}{2\sigma^2} \sum_{i=1}^n (x_i - \mu)^2
-  ```
+
+```math
+\ell(\mu, \sigma^2) = \ln L(\mu, \sigma^2) = -\frac{n}{2} \ln(2\pi\sigma^2) - \frac{1}{2\sigma^2} \sum_{i=1}^n (x_i - \mu)^2
+```
+
 * **Sistema de Equações de Verossimilhança (Gradiente nulo):**
 * **Derivada em relação a $`\mu`$(aplicando a regra da cadeia):**
-  ```math
-  \frac{\partial \ell}{\partial \mu} = -\frac{1}{2\sigma^2} \sum_{i=1}^n 2(x_i - \mu)(-1) = \frac{1}{\sigma^2} \sum_{i=1}^n (x_i - \mu) = 0
-  ```
-  Como $`\sigma^2 > 0`$:
-  ```math
-  \sum_{i=1}^n (X_i - \hat{\mu}) = 0 \implies \sum_{i=1}^n X_i - n\hat{\mu} = 0 \implies \hat{\mu} = \frac{1}{n} \sum_{i=1}^n X_i = \bar{X}
-  ```
+
+```math
+\frac{\partial \ell}{\partial \mu} = -\frac{1}{2\sigma^2} \sum_{i=1}^n 2(x_i - \mu)(-1) = \frac{1}{\sigma^2} \sum_{i=1}^n (x_i - \mu) = 0
+```
+
+Como $`\sigma^2 > 0`$:
+
+```math
+\sum_{i=1}^n (X_i - \hat{\mu}) = 0 \implies \sum_{i=1}^n X_i - n\hat{\mu} = 0 \implies \hat{\mu} = \frac{1}{n} \sum_{i=1}^n X_i = \bar{X}
+```
+
 * **Derivada em relação a $`\sigma^2`$:**
-  ```math
-  \frac{\partial \ell}{\partial \sigma^2} = -\frac{n}{2} \left( \frac{1}{2\pi\sigma^2} \cdot 2\pi \right) - \left( -\frac{1}{2(\sigma^2)^2} \right) \sum_{i=1}^n (x_i - \mu)^2 = -\frac{n}{2\sigma^2} + \frac{1}{2(\sigma^2)^2} \sum_{i=1}^n (x_i - \mu)^2 = 0
-  ```
-  Multiplicando toda a equação por $`2(\sigma^2)^2`$ e substituindo $`\mu`$ por $`\hat{\mu} = \bar{X}`$:
-  ```math
-  -n\hat{\sigma}^2 + \sum_{i=1}^n (X_i - \bar{X})^2 = 0 \implies \hat{\sigma}^2 = \frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^2
-  ```
+
+```math
+\frac{\partial \ell}{\partial \sigma^2} = -\frac{n}{2} \left( \frac{1}{2\pi\sigma^2} \cdot 2\pi \right) - \left( -\frac{1}{2(\sigma^2)^2} \right) \sum_{i=1}^n (x_i - \mu)^2 = -\frac{n}{2\sigma^2} + \frac{1}{2(\sigma^2)^2} \sum_{i=1}^n (x_i - \mu)^2 = 0
+```
+
+Multiplicando toda a equação por $`2(\sigma^2)^2`$ e substituindo $`\mu`$ por $`\hat{\mu} = \bar{X}`$:
+
+```math
+-n\hat{\sigma}^2 + \sum_{i=1}^n (X_i - \bar{X})^2 = 0 \implies \hat{\sigma}^2 = \frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^2
+```
+
 * **Ponto de Máximo:** Para comprovação rigorosa, a matriz Hessiana $`H`$ dada por:
-  ```math
-  H = \begin{bmatrix} \frac{\partial^2 \ell}{\partial \mu^2} & \frac{\partial^2 \ell}{\partial \mu \partial \sigma^2} \\ \frac{\partial^2 \ell}{\partial \sigma^2 \partial \mu} & \frac{\partial^2 \ell}{\partial (\sigma^2)^2} \end{bmatrix}
-  ```
-  deve ser provada como **definida negativa** (ou ter determinante $`det(H) > 0`$ e $`\frac{\partial^2 \ell}{\partial \mu^2} < 0`$).
+
+```math
+H = \begin{bmatrix} \frac{\partial^2 \ell}{\partial \mu^2} & \frac{\partial^2 \ell}{\partial \mu \partial \sigma^2} \\ \frac{\partial^2 \ell}{\partial \sigma^2 \partial \mu} & \frac{\partial^2 \ell}{\partial (\sigma^2)^2} \end{bmatrix}
+```
+
+deve ser provada como **definida negativa** (ou ter determinante $`det(H) > 0`$ e $`\frac{\partial^2 \ell}{\partial \mu^2} < 0`$).
 
 ###### *Exemplo 2: Distribuição Poisson com Parâmetro $`\lambda > 0`$*
 
 Seja $`X_1, \dots, X_n \sim \text{Poisson}(\lambda)`$, onde $`P(X = x) = \frac{e^{-\lambda} \lambda^x}{x!}`$.
 
 1. **Função de Verossimilhança:**
-   ```math
-   L(\lambda) = \prod_{i=1}^n \frac{e^{-\lambda} \lambda^{x_i}}{x_i!} = \frac{e^{-n\lambda} \lambda^{\sum_{i=1}^n x_i}}{\prod_{i=1}^n x_i!}
-   ```
+
+```math
+L(\lambda) = \prod_{i=1}^n \frac{e^{-\lambda} \lambda^{x_i}}{x_i!} = \frac{e^{-n\lambda} \lambda^{\sum_{i=1}^n x_i}}{\prod_{i=1}^n x_i!}
+```
+
 2. **Log-Verossimilhança:**
-   ```math
-   \ell(\lambda) = -n\lambda + \left( \sum_{i=1}^n x_i \right) \ln(\lambda) - \ln\left( \prod_{i=1}^n x_i! \right)
-   ```
+
+```math
+\ell(\lambda) = -n\lambda + \left( \sum_{i=1}^n x_i \right) \ln(\lambda) - \ln\left( \prod_{i=1}^n x_i! \right)
+```
+
 3. **Derivada e Candidato a EMV:**
-   ```math
-   \frac{d\ell(\lambda)}{d\lambda} = -n + \frac{\sum_{i=1}^n x_i}{\lambda} = 0 \implies n = \frac{\sum_{i=1}^n X_i}{\hat{\lambda}} \implies \hat{\lambda} = \frac{1}{n} \sum_{i=1}^n X_i = \bar{X}
-   ```
+
+```math
+\frac{d\ell(\lambda)}{d\lambda} = -n + \frac{\sum_{i=1}^n x_i}{\lambda} = 0 \implies n = \frac{\sum_{i=1}^n X_i}{\hat{\lambda}} \implies \hat{\lambda} = \frac{1}{n} \sum_{i=1}^n X_i = \bar{X}
+```
+
 4. **Confirmação do Máximo:**
-   ```math
-   \frac{d^2\ell(\lambda)}{d\lambda^2} = -\frac{\sum_{i=1}^n X_i}{\lambda^2}
-   ```
-   Como $`X_i \ge 0`$ para a distribuição Poisson, a segunda derivada é menor do que zero ($`\frac{d^2\ell}{d\lambda^2} < 0`$), confirmando que $`\hat{\lambda} = \bar{X}`$ é o EMV global.
+
+```math
+\frac{d^2\ell(\lambda)}{d\lambda^2} = -\frac{\sum_{i=1}^n X_i}{\lambda^2}
+```
+
+Como $`X_i \ge 0`$ para a distribuição Poisson, a segunda derivada é menor do que zero ($`\frac{d^2\ell}{d\lambda^2} < 0`$), confirmando que $`\hat{\lambda} = \bar{X}`$ é o EMV global.
 
 ###### *Tabela Resumo de Exercícios Propostos de EMV*
 
@@ -124,13 +152,16 @@ Seja $`X_1, \dots, X_n \sim \text{Poisson}(\lambda)`$, onde $`P(X = x) = \frac{e
 Se $`\hat{\theta}`$ é o estimador de máxima verossimilhança de $`\theta`$, então para qualquer função $`g(\theta)`$, o estimador de máxima verossimilhança de $`g(\theta)`$ é dado simplesmente por $`g(\hat{\theta})`$.
 
 * **Exemplo (Poisson):** Estimar a probabilidade de ocorrência de zero eventos, isto é, $`g(\lambda) = P(X = 0) = e^{-\lambda}`$. Como o EMV de $`\lambda`$ é $`\hat{\lambda} = \bar{X}`$, pela propriedade de invariância, o EMV de $`P(X=0)`$ é:
-  ```math
-  \widehat{P(X=0)} = e^{-\bar{X}}
-  ```
+
+```math
+\widehat{P(X=0)} = e^{-\bar{X}}
+```
+
 * **Exemplo (Bernoulli):** Estimar a variância $`g(p) = p(1-p)`$. O EMV será:
-  ```math
-  \widehat{g(p)} = \hat{p}(1-\hat{p}) = \bar{X}(1-\bar{X})
-  ```
+
+```math
+\widehat{g(p)} = \hat{p}(1-\hat{p}) = \bar{X}(1-\bar{X})
+```
 
 ##### 2.5. Propriedades Avançadas dos Estimadores
 
@@ -181,9 +212,11 @@ Uma sequência de estimadores $`T_n(X)`$ é **consistente** se converge em proba
 ```
 
 1. **Desigualdade de Tchebycheff (Limitante):**
-   ```math
-   P(|T_n(X) - \theta| \ge \epsilon) \le \frac{\text{Var}(T_n(X))}{\epsilon^2}
-   ```
+
+```math
+P(|T_n(X) - \theta| \ge \epsilon) \le \frac{\text{Var}(T_n(X))}{\epsilon^2}
+```
+
 2. **Condições Suficientes Práticas para Consistência:**
 3. $`\lim_{n \to \infty} ET_n(X) = \theta`$ (Não viesado assintoticamente)
 4. $`\lim_{n \to \infty} \text{Var}(T_n(X)) = 0`$
@@ -193,28 +226,38 @@ Uma sequência de estimadores $`T_n(X)`$ é **consistente** se converge em proba
 Considere a amostra $`X_1, \dots, X_n \sim N(\mu, \sigma^2)`$:
 
 1. **Análise do Estimador da Média ($`\hat{\mu} = \bar{X}`$):**
-   ```math
-   E\bar{X} = E\left [\frac{1}{n} \sum_{i=1}^n X_i \right ] = \frac{1}{n} \sum_{i=1}^n EX_i = \frac{1}{n} (n\mu) = \mu
-   ```
-   Portanto, $`B(\hat{\mu}) = \mu - \mu = 0`$. O estimador $`\bar{X}`$ é **não viesado** .
+
+```math
+E\bar{X} = E\left [\frac{1}{n} \sum_{i=1}^n X_i \right ] = \frac{1}{n} \sum_{i=1}^n EX_i = \frac{1}{n} (n\mu) = \mu
+```
+
+Portanto, $`B(\hat{\mu}) = \mu - \mu = 0`$. O estimador $`\bar{X}`$ é **não viesado** .
 2. **Análise do EMV da Variância ($`\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^2`$):** Ao calcular a esperança de $`\hat{\sigma}^2`$, obtém-se:
-   ```math
-   E\hat{\sigma}^2 = \frac{n-1}{n} \sigma^2
-   ```
-   O viés do EMV da variância é:
-   ```math
-   B(\hat{\sigma}^2) = E\hat{\sigma}^2 - \sigma^2 = \frac{n-1}{n}\sigma^2 - \sigma^2 = -\frac{1}{n}\sigma^2 \neq 0
-   ```
-   Assim, o EMV da variância é **viesado** (subestima a variância populacional para amostras finitas), embora seja **assintoticamente não viesado** pois $`\lim_{n \to \infty} E\hat{\sigma}^2 = \sigma^2`$.
+
+```math
+E\hat{\sigma}^2 = \frac{n-1}{n} \sigma^2
+```
+
+O viés do EMV da variância é:
+
+```math
+B(\hat{\sigma}^2) = E\hat{\sigma}^2 - \sigma^2 = \frac{n-1}{n}\sigma^2 - \sigma^2 = -\frac{1}{n}\sigma^2 \neq 0
+```
+
+Assim, o EMV da variância é **viesado** (subestima a variância populacional para amostras finitas), embora seja **assintoticamente não viesado** pois $`\lim_{n \to \infty} E\hat{\sigma}^2 = \sigma^2`$.
 3. **Mecanismo de Correção de Viés:** Para eliminar o vício, multiplica-se $`\hat{\sigma}^2`$ por $`\frac{n}{n-1}`$:
-   ```math
-   E\left [\frac{n}{n-1} \hat{\sigma}^2 \right ] = \frac{n}{n-1} E\hat{\sigma}^2 = \frac{n}{n-1} \left( \frac{n-1}{n} \sigma^2 \right) = \sigma^2
-   ```
-   Isso define a variância amostral corrigida $`S^2`$:
-   ```math
-   S^2 = \frac{n}{n-1} \left( \frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^2 \right) = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar{X})^2
-   ```
-   Portanto, $`S^2`$ é o estimador não viesado da variância populacional $`\sigma^2`$.
+
+```math
+E\left [\frac{n}{n-1} \hat{\sigma}^2 \right ] = \frac{n}{n-1} E\hat{\sigma}^2 = \frac{n}{n-1} \left( \frac{n-1}{n} \sigma^2 \right) = \sigma^2
+```
+
+Isso define a variância amostral corrigida $`S^2`$:
+
+```math
+S^2 = \frac{n}{n-1} \left( \frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^2 \right) = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar{X})^2
+```
+
+Portanto, $`S^2`$ é o estimador não viesado da variância populacional $`\sigma^2`$.
 
 #### 3. Questionário de Fixação (Quiz)
 

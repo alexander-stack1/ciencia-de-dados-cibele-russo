@@ -84,34 +84,44 @@ Visualização Conceitual da Relação entre os Pontos:
 ###### *Ferramentas de Detecção de Alavanca e Resíduos*
 
 * **Matriz Chapéu ($`H`$):**
-  ```math
-  H = X(X^T X)^{-1} X^T
-  ```
-  É uma matriz de projeção ortogonal, simétrica e idempotente ($`H^2 = H`$). O $`i`$ -ésimo elemento da diagonal principal, $`h_i = h_{ii} = x_i^T (X^T X)^{-1} x_i`$, mede o grau de alavancagem da $`i`$ -ésima observação ($`0 \le h_i \le 1`$).
+
+```math
+H = X(X^T X)^{-1} X^T
+```
+
+É uma matriz de projeção ortogonal, simétrica e idempotente ($`H^2 = H`$). O $`i`$ -ésimo elemento da diagonal principal, $`h_i = h_{ii} = x_i^T (X^T X)^{-1} x_i`$, mede o grau de alavancagem da $`i`$ -ésima observação ($`0 \le h_i \le 1`$).
 * *Critério de corte:* Uma observação é considerada ponto de alavanca se $`h_i > 2 \bar{h}`$, onde a média é $`\bar{h} = \frac{p}{n}`$.
 * **Resíduo Ordinário:**
-  ```math
-  e_i = y_i - \hat{y}_i \quad \Rightarrow \quad e = (I - H)Y
-  ```
-  Possui variância não constante: $`Var(e_i) = \sigma^2 (1 - h_i)`$. A estimativa não viesada de $`\sigma^2`$ é dada pelo Erro Quadrático Médio ($`s^2 = \frac{SQ_R}{n - p}`$).
+
+```math
+e_i = y_i - \hat{y}_i \quad \Rightarrow \quad e = (I - H)Y
+```
+
+Possui variância não constante: $`Var(e_i) = \sigma^2 (1 - h_i)`$. A estimativa não viesada de $`\sigma^2`$ é dada pelo Erro Quadrático Médio ($`s^2 = \frac{SQ_R}{n - p}`$).
 * **Resíduos Estudentizados Interna e Externamente:** Para padronizar o resíduo e permitir comparações, divide-se pelo seu erro padrão:
 * *Internamente Estudentizado:*
-  ```math
-  t_i = \frac{e_i}{\hat{\sigma} \sqrt{1 - h_i}}
-  ```
+
+```math
+t_i = \frac{e_i}{\hat{\sigma} \sqrt{1 - h_i}}
+```
+
 * *Externamente Estudentizado (via técnica de Jackknife):*
-  ```math
-  t_i^* = \frac{e_i}{\hat{\sigma}_{(i)} \sqrt{1 - h_i}}
-  ```
-  onde $`\hat{\sigma}_{(i)}`$ é a estimativa da variância calculada sem a $`i`$ -ésima observação, impedindo que um *outlier* inflacione o denominador e disfarce sua própria discrepância.
+
+```math
+t_i^* = \frac{e_i}{\hat{\sigma}_{(i)} \sqrt{1 - h_i}}
+```
+
+onde $`\hat{\sigma}_{(i)}`$ é a estimativa da variância calculada sem a $`i`$ -ésima observação, impedindo que um *outlier* inflacione o denominador e disfarce sua própria discrepância.
 
 ###### *Medidas de Influência Global e Local*
 
 * **Distância de Cook ($`D_i`$):** Avalia o impacto da remoção da $`i`$ -ésima observação sobre todo o vetor de parâmetros ajustados $`\hat{\beta}`$:
-  ```math
-  D_i = \frac{(\hat{\beta} - \hat{\beta}_{(i)})^T X^T X (\hat{\beta} - \hat{\beta}_{(i)})}{p \hat{\sigma}^2} = \frac{t_i^2}{p} \left( \frac{h_i}{1 - h_i} \right)
-  ```
-  Valores elevados (comparados aos quantis de uma distribuição $`F_{p, n-p}`$) indicam alta influência.
+
+```math
+D_i = \frac{(\hat{\beta} - \hat{\beta}_{(i)})^T X^T X (\hat{\beta} - \hat{\beta}_{(i)})}{p \hat{\sigma}^2} = \frac{t_i^2}{p} \left( \frac{h_i}{1 - h_i} \right)
+```
+
+Valores elevados (comparados aos quantis de uma distribuição $`F_{p, n-p}`$) indicam alta influência.
 * **DFFITS e DFBETAS:** Medem, respectivamente, a alteração no valor ajustado individual e a variação percentual em cada coeficiente $`\beta_j`$ específico quando a $`i`$ -ésima observação é excluída.
 * **Análise Confirmatória / Influência Global (** ***Case Deletion*** **):** Procedimento sistemático de remoção individual de casos para observar variações percentuais nas estimativas dos parâmetros e nos p-valores dos testes de hipótese estatística.
 * **Gráfico de Envelope:** Técnica baseada em simulações de Monte Carlo que projeta bandas de confiança para os resíduos estudentizados ordenados, permitindo verificar visualmente se os resíduos aderem à distribuição teórica esperada.
@@ -147,26 +157,33 @@ onde:
 ###### *Propriedades da Família Exponencial*
 
 * **Média (Esperança):**
-  ```math
-  EY_i = \mu_i = b'(\theta_i) = \frac{d b(\theta_i)}{d \theta_i}
-  ```
+
+```math
+EY_i = \mu_i = b'(\theta_i) = \frac{d b(\theta_i)}{d \theta_i}
+```
+
 * **Variância:**
-  ```math
-  Var(Y_i) = \frac{b''(\theta_i)}{\phi} = \frac{V(\mu_i)}{\phi}
-  ```
-  onde $`V(\mu_i)`$ é a **função de variância** , que estabelece como a variância de $`Y_i`$ depende de sua média $`\mu_i`$.
+
+```math
+Var(Y_i) = \frac{b''(\theta_i)}{\phi} = \frac{V(\mu_i)}{\phi}
+```
+
+onde $`V(\mu_i)`$ é a **função de variância** , que estabelece como a variância de $`Y_i`$ depende de sua média $`\mu_i`$.
 
 ###### *Os Três Componentes do MLG*
 
 1. **Componente Aleatório:** Variáveis respostas independentes $`Y_1, \dots, Y_n`$ com distribuição pertencente à Família Exponencial.
 2. **Componente Sistemático:** O preditor linear $`\eta_i`$, que combina linearmente as covariáveis:
-   ```math
-   \eta_i = x_i^T \beta = \beta_0 + \beta_1 x_{i1} + \dots + \beta_p x_{ip}
-   ```
+
+```math
+\eta_i = x_i^T \beta = \beta_0 + \beta_1 x_{i1} + \dots + \beta_p x_{ip}
+```
+
 3. **Função de Ligação ($`g`$):** Uma função monótona e diferenciável que conecta a média da resposta $`\mu_i`$ ao preditor linear $`\eta_i`$:
-   ```math
-   \eta_i = g(\mu_i)
-   ```
+
+```math
+\eta_i = g(\mu_i)
+```
 
 ###### *Funções de Ligação Canônicas e Funções de Variância*
 
@@ -206,11 +223,8 @@ A ligação é dita **canônica** quando o preditor linear é igualado diretamen
 6. **Resposta:** O gráfico de envelope constrói bandas de confiança geradas por simulação para os resíduos ordenados sob a suposição de que o modelo está correto. Ele permite identificar visualmente se os resíduos observados seguem a distribuição teórica esperada ou se há desvios de especificação.
 7. **Resposta:** Os três componentes são: o componente aleatório (variável resposta $`Y`$ pertencente à Família Exponencial), o componente sistemático (preditor linear $`\eta = X\beta`$) e a função de ligação $`g(\mu)`$, que conecta a média esperada da resposta ($`\mu`$) ao preditor linear.
 8. **Resposta:** Para uma variável na Família Exponencial expressa por $`f(y_i; \theta_i, \phi) = \exp\{\phi y_i \theta_i - b(\theta_i) + c(y_i, \phi)\}`$, a esperança é dada pela primeira derivada $`EY_i = \mu_i = b'(\theta_i)`$. A variância é expressa por $`Var(Y_i) = \frac{b''(\theta_i)}{\phi} = \frac{V(\mu_i)}{\phi}`$, sendo $`V(\mu_i)`$ a função de variância.
-
-| 9. **Resposta:** A função de ligação é dita canônica quando ela iguala diretamente o preditor linear ao parâmetro canônico de localização da distribuição | ou seja | $`\eta_i = \theta_i`$. |
-|---|---|---|
-| 10. **Resposta:** Para a distribuição Poisson | a função de variância é $`V(\mu) = \mu`$ e a ligação canônica é a logarítmica ($`g(\mu) = \ln(\mu)`$). Para a distribuição Binomial | a função de variância é $`V(\mu) = \mu(1 - \mu)`$ e a ligação canônica é a logito ($`g(\mu) = \ln(\mu / (1 - \mu))`$). |
-
+9. **Resposta:** A função de ligação é dita canônica quando ela iguala diretamente o preditor linear ao parâmetro canônico de localização da distribuição, ou seja, $`\eta_i = \theta_i`$.
+10. **Resposta:** Para a distribuição Poisson, a função de variância é $`V(\mu) = \mu`$ e a ligação canônica é a logarítmica ($`g(\mu) = \ln(\mu)`$). Para a distribuição Binomial, a função de variância é $`V(\mu) = \mu(1 - \mu)`$ e a ligação canônica é a logito ($`g(\mu) = \ln(\mu / (1 - \mu))`$).
 
 #### Questões Discursivas (Formato Ensaio)
 

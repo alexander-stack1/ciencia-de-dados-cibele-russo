@@ -64,42 +64,58 @@ No modelo $`y = X\beta + \varepsilon`$ com $`\varepsilon \sim N_n(0, \Sigma)`$, 
 ###### *Demonstração Matemática Passo a Passo*
 
 1. **Igualdade das Expressões:** Para que os dois métodos gerem o mesmo resultado, exige-se que:
-   ```math
-   (X^T \Sigma^{-1} X)^{-1} X^T \Sigma^{-1} y = (X^T X)^{-1} X^T y
-   ```
+
+```math
+(X^T \Sigma^{-1} X)^{-1} X^T \Sigma^{-1} y = (X^T X)^{-1} X^T y
+```
+
 2. **Independência em relação a $`y`$:** Como a igualdade deve ser válida para qualquer vetor de observações $`y`$, igualam-se as matrizes multiplicadoras de $`y`$:
-   ```math
-   (X^T \Sigma^{-1} X)^{-1} X^T \Sigma^{-1} = (X^T X)^{-1} X^T
-   ```
+
+```math
+(X^T \Sigma^{-1} X)^{-1} X^T \Sigma^{-1} = (X^T X)^{-1} X^T
+```
+
 3. **Aplicação da Transposta:** Transpondo ambos os lados da equação e utilizando a propriedade de simetria de $`\Sigma`$ (e consequentemente de $`\Sigma^{-1}`$ e de $`(X^T \Sigma^{-1} X)^{-1}`$):
-   ```math
-   \left( (X^T \Sigma^{-1} X)^{-1} X^T \Sigma^{-1} \right)^T = \left( (X^T X)^{-1} X^T \right)^T
-   ```
-   ```math
-   \Sigma^{-1} X (X^T \Sigma^{-1} X)^{-1} = X (X^T X)^{-1}
-   ```
+
+```math
+\left( (X^T \Sigma^{-1} X)^{-1} X^T \Sigma^{-1} \right)^T = \left( (X^T X)^{-1} X^T \right)^T
+```
+
+```math
+\Sigma^{-1} X (X^T \Sigma^{-1} X)^{-1} = X (X^T X)^{-1}
+```
+
 4. **Pré-multiplicação por $`\Sigma`$:** Multiplicando previamente ambos os lados pela matriz $`\Sigma`$ (sabendo que $`\Sigma \Sigma^{-1} = I`$):
-   ```math
-   \Sigma \left( \Sigma^{-1} X (X^T \Sigma^{-1} X)^{-1} \right) = \Sigma \left( X (X^T X)^{-1} \right)
-   ```
-   ```math
-   X (X^T \Sigma^{-1} X)^{-1} = \Sigma X (X^T X)^{-1}
-   ```
+
+```math
+\Sigma \left( \Sigma^{-1} X (X^T \Sigma^{-1} X)^{-1} \right) = \Sigma \left( X (X^T X)^{-1} \right)
+```
+
+```math
+X (X^T \Sigma^{-1} X)^{-1} = \Sigma X (X^T X)^{-1}
+```
+
 5. **Pós-multiplicação por $`(X^T X)`$:** Multiplicando posteriormente ambos os lados pela matriz $`(X^T X)`$ (a qual admite inversa devido ao posto completo de $`X`$):
-   ```math
-   X (X^T \Sigma^{-1} X)^{-1} (X^T X) = \Sigma X (X^T X)^{-1} (X^T X)
-   ```
-   ```math
-   X (X^T \Sigma^{-1} X)^{-1} X^T X = \Sigma X
-   ```
+
+```math
+X (X^T \Sigma^{-1} X)^{-1} (X^T X) = \Sigma X (X^T X)^{-1} (X^T X)
+```
+
+```math
+X (X^T \Sigma^{-1} X)^{-1} X^T X = \Sigma X
+```
+
 6. **Definição da Matriz $`F`$:** Definindo a matriz $`F`$ como:
-   ```math
-   F = (X^T \Sigma^{-1} X)^{-1} X^T X
-   ```
-   Substituindo $`F`$ na equação, conclui-se a condição do teorema:
-   ```math
-   \Sigma X = X F
-   ```
+
+```math
+F = (X^T \Sigma^{-1} X)^{-1} X^T X
+```
+
+Substituindo $`F`$ na equação, conclui-se a condição do teorema:
+
+```math
+\Sigma X = X F
+```
 
 ###### *Consequências Práticas do Caso 3*
 
