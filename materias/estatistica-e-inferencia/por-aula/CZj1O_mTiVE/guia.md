@@ -149,11 +149,8 @@ Substituindo $`p(1-p)`$ por $`0,25`$, obtém-se o erro amostral máximo possíve
 6. A afirmação é incorreta porque o parâmetro $`\mu`$ é uma constante fixa desconhecida, e não uma variável aleatória. Uma vez calculado numericamente a partir de dados observados, o intervalo ou contém o parâmetro ou não contém, sendo a probabilidade uma propriedade do processo aleatório de amostragem prévio.
 7. Ao aumentar o nível de confiança mantendo o tamanho amostral constante, o valor crítico (quantil $`z_{\alpha/2}`$ ou $`t_{\alpha/2}`$) aumenta. Consequentemente, a margem de erro se expande, resultando em um intervalo de confiança mais largo.
 8. Quando $`\sigma^2`$ é desconhecido, utiliza-se o desvio padrão amostral $`S`$ em substituição a $`\sigma`$. Devido à incerteza adicional introduzida por $`S`$, substitui-se o quantil da distribuição normal padrão $`z_{\alpha/2}`$ pelo quantil da distribuição $`t`$ de Student $`t_{\alpha/2, n-1}`$ com $`n-1`$ graus de liberdade.
-
-| 9. A distribuição foi criada por William Sealy Gosset em 1908 enquanto trabalhava na cervejaria Guinness | sob o pseudônimo de "Student". A motivação foi resolver o problema de inferência estatística no controle de qualidade com pequenas amostras | onde a variância populacional era desconhecida. |
-|---|---|---|
-| 10. A estratégia otimista substitui o parâmetro $`p`$ na fórmula do erro padrão pelo valor estimado na amostra $`\hat{p}`$. A estratégia conservadora assume o caso de variância máxima possível fixando $`p(1-p) = 0 | 25`$ | garantindo um intervalo mais amplo que limita o erro para qualquer valor de $`p`$. |
-
+9. A distribuição foi criada por William Sealy Gosset em 1908 enquanto trabalhava na cervejaria Guinness, sob o pseudônimo de "Student". A motivação foi resolver o problema de inferência estatística no controle de qualidade com pequenas amostras, onde a variância populacional era desconhecida.
+10. A estratégia otimista substitui o parâmetro $`p`$ na fórmula do erro padrão pelo valor estimado na amostra $`\hat{p}`$. A estratégia conservadora assume o caso de variância máxima possível fixando $`p(1-p) = 0,25`$, garantindo um intervalo mais amplo que limita o erro para qualquer valor de $`p`$.
 
 #### Parte 4: Questões Discursivas (Formato Ensaio)
 
