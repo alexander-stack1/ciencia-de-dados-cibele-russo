@@ -77,3 +77,35 @@ Para cada caso, especifique o tipo de dependência, a premissa sobre as variânc
 | Variância Combinada $`(S_c^2)`$ | Estimador da variância populacional comum utilizado no Teste t para duas amostras independentes com variâncias desconhecidas e iguais (Caso 3A), combinando as variâncias amostrais individuais ponderadas pelos seus graus de liberdade. |
 | Variável de Escala | Variável quantitativa cujos valores são mensurados em uma régua contínua, mas na qual razões diretas não possuem significado físico absoluto (ex.: temperatura em Celsius, latitude e longitude). |
 | Viés de um Estimador | Diferença entre o valor esperado (esperança matemática) de um estimador amostral e o verdadeiro valor do parâmetro populacional que ele busca estimar. Se essa diferença for zero, o estimador é dito não viesado. |
+
+## Atualização nov/2026
+
+O [guia de estudo](guia-de-estudo.md) desta atualização inclui as aulas novas de testes de hipóteses, teste t, Qui-Quadrado e revisão. Seguem os trechos correspondentes. O guia completo está em [guia-de-estudo.md](guia-de-estudo.md).
+
+### Questionário (trechos)
+
+7. Em testes de hipóteses estatísticas, qual é a definição de Erro do Tipo I e de Erro do Tipo II, e qual é a estratégia clássica empregada para gerenciar as probabilidades de ocorrência desses erros?
+
+8. Em que cenário de avaliação experimental deve-se optar pela utilização do teste t pareado em detrimento do teste t para duas amostras independentes?
+
+9. Como é calculada a quantidade de graus de liberdade e qual é o critério de tomada de decisão para a rejeição da hipótese nula em um Teste Qui-Quadrado de Associação para tabelas de contingência $`R \times S`$?
+
+### Gabarito (trechos)
+
+7. O Erro do Tipo I ($`\alpha`$) consiste em rejeitar a hipótese nula $`H_0`$ quando ela é verdadeira, enquanto o Erro do Tipo II ($`\beta`$) é o erro de não rejeitar $`H_0`$ quando ela é falsa. Como não é possível minimizar ambos os erros simultaneamente para um n fixo, a estratégia padrão é fixar a probabilidade do Erro do Tipo I em um nível de significância $`\alpha`$ (geralmente 5%) e maximizar o poder do teste (1 - $`\beta`$).
+
+8. O teste t pareado é indicado quando as observações dos dois grupos são dependentes ou correlacionadas, como em medições efetuadas nos mesmos indivíduos antes e depois de uma intervenção. Nessas condições, o teste é aplicado sobre as diferenças individuais de cada par, avaliando se a média populacional dessas diferenças pode ser considerada nula sob a hipótese nula.
+
+9. No Teste Qui-Quadrado de Associação, a estatística observada é comparada com o valor crítico da distribuição Qui-Quadrado com graus de liberdade $`GL = (R - 1) \times (S - 1)`$. Se a estatística observada superar o valor crítico tabular para o nível de significância $`\alpha`$ escolhido (ou se o p-valor for menor ou igual a $`\alpha`$), a hipótese nula de independência entre as variáveis é rejeitada.
+
+### Questões para desenvolvimento (trechos)
+
+5. Analise o processo de tomada de decisão em um Teste de Hipóteses, explicitando a inter-relação entre o nível de significância ($`\alpha`$), a região crítica e o p-valor (valor-p). Justifique formalmente a razão metodológica pela qual a conclusão de um teste deve ser expressa em termos de "não rejeitar $`H_0`$" ou "rejeitar $`H_0`$", rejeitando o uso da expressão "aceitar $`H_0`$".
+
+### Termos do glossário (trechos)
+
+| Termo | Definição |
+|---|---|
+| Nível de Significância ($`\alpha`$) | Threshold probabilístico pré-determinado pelo pesquisador que define o limite máximo aceitável para a ocorrência do Erro do Tipo I em um teste de hipóteses. |
+| Teste Qui-Quadrado de Associação | Teste não paramétrico utilizado para avaliar a existência de dependência ou associação estatística entre duas variáveis qualitativas dispostas em uma tabela de contingência. |
+| Teste t Pareado | Teste de hipóteses paramétrico empregado para comparar as médias de duas populações dependentes, analisando a distribuição das diferenças pareadas de observações correlacionadas. |

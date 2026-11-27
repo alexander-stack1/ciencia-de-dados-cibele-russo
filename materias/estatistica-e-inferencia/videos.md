@@ -1,6 +1,6 @@
 # 🎬 Vídeos-fonte: Estatística e Inferência
 
-49 vídeos do canal [@CibeleRussoUSP](https://www.youtube.com/@CibeleRussoUSP), organizados por subtema e na sequência das aulas. Todos os direitos dos vídeos pertencem à autora.
+53 vídeos do canal [@CibeleRussoUSP](https://www.youtube.com/@CibeleRussoUSP), organizados por subtema e na sequência das aulas. Todos os direitos dos vídeos pertencem à autora.
 
 | # | Subtema | Título | Duração |
 |---|---|---|---|
@@ -53,5 +53,9 @@
 | 47 | SME0221 Introdução à Inferência Estatística | [Introdução à Inferência Estatística- Estimador de mínimos quadrados ordinários modelo linear simples](https://www.youtube.com/watch?v=KbltvPiYgZQ) | 0:11:09 |
 | 48 | SME0221 Introdução à Inferência Estatística | [Teorema do Limite Central - Estatística básica](https://www.youtube.com/watch?v=6e2MjaSFcEE) | 0:02:45 |
 | 49 | Testes de hipóteses | [Introduction to Statistical Inference - Hypothesis Testing](https://www.youtube.com/watch?v=lzflg-0U01Y) | 1:12:16 |
+| 50 | Testes de hipóteses | [SME0123 Estatística - Testes de Hipóteses](https://www.youtube.com/watch?v=6w_L0L9M2Ns) | 1:27:19 |
+| 51 | Testes de hipóteses | [SME0123 Estatística - Testes de Hipóteses - Aula de 13/11/2026](https://www.youtube.com/watch?v=vHuk44DE5Ek) | 1:40:02 |
+| 52 | Testes de hipóteses | [SME0123 Estatística - Testes de Hipóteses para comparação de médias e teste Qui-quadrado](https://www.youtube.com/watch?v=iyRzD5PMTiY) | 1:45:14 |
+| 53 | Exercícios e revisão | [SME0123 Estatística - Exercícios (revisão para a prova)](https://www.youtube.com/watch?v=63IeiV5JETc) | 1:39:22 |
 
 [↩ Voltar à trilha](README.md)
