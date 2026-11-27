@@ -1,8 +1,8 @@
 # Catálogo – Canal Cibele Russo (USP)
 
-Total: 240 vídeos
+Total: 283 vídeos
 
-## Análise Multivariada e Aprendizado Não-Supervisionado (36)
+## Análise Multivariada e Aprendizado Não-Supervisionado (37)
 
 ### Análise descritiva multivariada
 
@@ -80,12 +80,13 @@ Total: 240 vídeos
 
 - [Análise Multivariada e Aprendizado Não-Supervisionado - Aula12a Análise de Correspondência](https://www.youtube.com/watch?v=Z7UMIEUx2xM) 0:23:54
 - [Análise Multivariada e Aprendizado Não-Supervisionado 12b Análise de Correspondência aplic em Python](https://www.youtube.com/watch?v=hgmLLcgrx-k) 0:11:40
+- [Análise Multivariada Aprendizado Não Supervisionado Aula12e Análise de Correspondência exemplo em R](https://www.youtube.com/watch?v=A0-CO3VYGck) 0:09:06
 
 ### Aula aberta (visão geral do curso)
 
 - [Análise Multivariada e Aprendizado Não-Supervisionado - Aula aberta](https://www.youtube.com/watch?v=cDyIRfFG2F8) 0:55:22
 
-## Estatística e Inferência (49)
+## Estatística e Inferência (53)
 
 ### Introdução à inferência estatística
 
@@ -168,6 +169,13 @@ Total: 240 vídeos
 ### Testes de hipóteses
 
 - [Introduction to Statistical Inference - Hypothesis Testing](https://www.youtube.com/watch?v=lzflg-0U01Y) 1:12:16
+- [SME0123 Estatística - Testes de Hipóteses](https://www.youtube.com/watch?v=6w_L0L9M2Ns) 1:27:19
+- [SME0123 Estatística - Testes de Hipóteses - Aula de 13/11/2026](https://www.youtube.com/watch?v=vHuk44DE5Ek) 1:40:02
+- [SME0123 Estatística - Testes de Hipóteses para comparação de médias e teste Qui-quadrado](https://www.youtube.com/watch?v=iyRzD5PMTiY) 1:45:14
+
+### Exercícios e revisão
+
+- [SME0123 Estatística - Exercícios (revisão para a prova)](https://www.youtube.com/watch?v=63IeiV5JETc) 1:39:22
 
 ## Estatística e Otimização (CDPO) (8)
 
@@ -300,7 +308,7 @@ Total: 240 vídeos
 
 - [Aprendizado de máquina estatístico - Introdução a Redes neurais multicamadas - Multilayer perceptron](https://www.youtube.com/watch?v=JCEVfXhT41U) 1:05:23
 
-## Modelos de Regressão (34)
+## Modelos de Regressão (36)
 
 ### Modelos de regressão
 
@@ -337,6 +345,8 @@ Total: 240 vídeos
 - [Modelos Lineares - Aplicação mod linear e Estimador de máxima verossimilhança](https://www.youtube.com/watch?v=5Z3ka09LDaw) 1:14:39
 - [Modelos Lineares - Distribuição de formas quadráticas](https://www.youtube.com/watch?v=o8nS0OWj7Pk) 1:18:25
 - [Modelos Lineares - Modelo linear geral com matriz de planejamento de posto completo](https://www.youtube.com/watch?v=5iUitKI7PGk) 0:50:16
+- [EST5507 Modelos de Regressão MLG com resposta binária -  Regressão logística  + dados eleitorais](https://www.youtube.com/watch?v=aGVWcz5Fteo) 1:04:14
+- [EST5507 Modelos de Regressão  - MLGs para contagem - Modelos (log) Poisson e binomial negativa](https://www.youtube.com/watch?v=YzqrNmZyguk) 1:27:48
 
 ### Mínimos quadrados na regressão múltipla
 
@@ -418,3 +428,59 @@ Total: 240 vídeos
 - [Live with Cibele Russo (IME | USP) - Why do data scientists need to study mathematics?](https://www.youtube.com/watch?v=oxalO6bl7dc) 0:57:18
 - [R x Python para Estatística e Ciência de Dados. Quem ganha essa briga? com Dalson Figueiredo](https://www.youtube.com/watch?v=DpsA5lyFJ5Y) 1:30:32
 - [Ômega Talks | Cibele Russo · Revisitando modelos não-lineares com efeitos aleatórios](https://www.youtube.com/watch?v=yovVzn-wmIU) 1:17:54
+
+## Shorts e avisos (36)
+
+### Anúncio de novo curso
+
+- [Tem curso novo chegando!! Estatística para Ciência de Dados e Inteligência Artificial em Python!!](https://www.youtube.com/watch?v=RDmDlsHfDpI) 0:01:14
+
+### Aviso (sem descrição)
+
+- [21 de dezembro de 2025](https://www.youtube.com/watch?v=8pv9L8moSfE) 0:00:28
+
+### Curiosidades e dicas
+
+- [Variáveis tipo escala. Um terremoto é forte na escala Richter a partir de 6 ou 7p? #estatistica](https://www.youtube.com/watch?v=6WV5v2-Eajg) 0:00:57
+- [6 de outubro de 2024](https://www.youtube.com/watch?v=JM7BeRnvz_g) 0:00:15
+- [Estatística para Ciência de Dados em Python. #datascience #machinelearning #estatisticaaplicada](https://www.youtube.com/watch?v=-QDVaek6kTE) 0:00:53
+- [Redes neurais multicamadas - multilayer perceptron #neuralnetworks #datascience #machinelearning](https://www.youtube.com/watch?v=3ZquhszQuq8) 0:00:29
+- [Sobre inteligência artificial, brevemente!](https://www.youtube.com/watch?v=UB8RbcLMY6A) 0:01:41
+- [Você tem investido em conhecimento para analisar dados de sua própria área?](https://www.youtube.com/watch?v=kntTN8w1oH0) 0:00:30
+- [A Cibele usa o R sim!](https://www.youtube.com/watch?v=I4wH1gHUhHk) 0:00:46
+- [Exemplo R no Python - Curso CDPO USP](https://www.youtube.com/watch?v=8r9T_420iHU) 0:00:57
+- [Jogador bom chuta com as duas pernas :) por Dalson Figueiredo](https://www.youtube.com/watch?v=PLlsyNcIfxI) 0:00:56
+- [Time R ou Time Python?](https://www.youtube.com/watch?v=A_kIZyb_Vqk) 0:00:58
+- [Usando o R dentro do notebook Python](https://www.youtube.com/watch?v=y_QkhX9ZUUY) 0:00:52
+
+### Divulgação de aulas e playlists
+
+- [Teorema do Limite Central](https://www.youtube.com/watch?v=kCuVMP2KvK0) 0:00:15
+- [Vamos discutir sobre o p-valor? Vejam minha aula ao vivo de testes de hipóteses!](https://www.youtube.com/watch?v=QmPXGlYAY6k) 0:00:15
+- [A partir de agosto eu vou disponibilizar as minhas aulas de Estatística I da USP aqui no meu YouTube](https://www.youtube.com/watch?v=HUU7QsDlwXo) 0:00:17
+- [Assista a minha playlist de Introdução à Inferência Estatística! #estatística #ciênciadedados](https://www.youtube.com/watch?v=piOWSzkZMEE) 0:00:16
+- [Aula especial de Testes de Hipóteses com aplicações em Python na playlist CDPO](https://www.youtube.com/watch?v=miztKjJG1XY) 0:00:15
+
+### Divulgação do curso CDPO
+
+- [Abriremos as inscrições Estatística e Otimização para Ciência de Dados e Pesquisa Operacional 1/12](https://www.youtube.com/watch?v=QgbYgld3GKE) 0:01:15
+- [Sobre o curso de Estatística e Otimização para Ciência de Dados e Pesquisa Operacional](https://www.youtube.com/watch?v=tLKvKbAKu1Y) 0:00:29
+- [Acesse cdpo.icmc.usp.br #cienciadedados #estatisticaaplicada #datascience](https://www.youtube.com/watch?v=N9ViJcntGTI) 0:00:15
+- [Acesse cdpo.icmc.usp.br #cienciadedados #estatisticaaplicada #estatistica #otimizacão](https://www.youtube.com/watch?v=pTNUyO1ivBc) 0:00:15
+- [Inscrições abertas para a segunda edição do curso CDPO](https://www.youtube.com/watch?v=ttrYBOIloms) 0:00:34
+- [Estão buscando se atualizar em machine learning, inteligência artificial, ciência de dados?](https://www.youtube.com/watch?v=BZWG-4J0pyw) 0:02:12
+- [LIVE nesta quinta-feira 31/7 às 20h do curso CDPO @cdpo_usp. Esperamos vocês! No YouTube @cdpo_usp](https://www.youtube.com/watch?v=P41xNpnPuRU) 0:00:28
+- [Últimos dias de Inscrições abertas! Informações em cdpo.icmc.usp.br #ciênciadedados #otimização](https://www.youtube.com/watch?v=w7vaCdJ6xQE) 0:01:28
+- [Insformacoes em cdpo.icmc.usp.br](https://www.youtube.com/watch?v=xgfP6_Qkzkg) 0:00:18
+- [Ainda dá tempo de entrar na 2. edição! Envie e-mail para cdpo@icmc.usp.br](https://www.youtube.com/watch?v=HxrFlyiewF8) 0:00:18
+- [No dia 3/12 vamos abrir as inscrições para a tão esperada 3a edição do curso CDPO USP! Acompanhem!](https://www.youtube.com/watch?v=0s7BR_UlLDw) 0:00:21
+- [Estão abertas as inscrições pra 3a edição do curso CDPO USP. Temos bolsas! Acesse cdpo.icmc.usp.br](https://www.youtube.com/watch?v=F45UMZPbea4) 0:00:57
+- [Aula aberta nesta quinta-feira às 19h no YouTube @cdpo_usp. Estatística e Testes de Hipóteses 🥰✨](https://www.youtube.com/watch?v=sJo6ao8qYRY) 0:00:56
+- [Conheça o curso Estatística e Otimização para Ciência de Dados e Pesquisa Operacional CDPO USP.](https://www.youtube.com/watch?v=d5A62nBvSI4) 0:02:34
+- [Aprenda Estatística, Otimização, Ciência de Dados e Pesquisa Operacional com certificação USP. CDPO.](https://www.youtube.com/watch?v=_DuUiKqT_Nw) 0:00:42
+- [Domine Ciência de Dados e Pesquisa Operacional com professores doutores USP com muita experiência!](https://www.youtube.com/watch?v=YnIBtCu1ohA) 0:01:11
+- [Corra que ainda é possível se inscrever no curso CDPO USP. Acesse cdpo.icmc.usp.br](https://www.youtube.com/watch?v=wWs4f-J81Wk) 0:00:45
+
+### Participação em documentário
+
+- [Episódio sobre Ciência de Dados](https://www.youtube.com/watch?v=czCe5IARA8A) 0:02:42
