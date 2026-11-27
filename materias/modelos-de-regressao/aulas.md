@@ -903,3 +903,44 @@ Interpretação: Possuir garantia bancária (X=1) aumenta a chance de aprovaçã
 Parabéns por concluir esta jornada avançada sobre Modelos de Regressão! Você percorreu uma trilha rigorosa que se iniciou na intuição dos Mínimos Quadrados Simples, avançou pelos fundamentos da Álgebra Matricial e Distribuições Multivariadas, formalizou o Modelo Linear Geral e consolidou a inferência em Modelos Lineares Generalizados.
 
 Com este arcabouço conceitual e matemático, você está preparado para formular, estimar, diagnosticar e interpretar modelos estatísticos avançados, unindo o rigor analítico à tomada de decisão fundamentada em dados.
+
+## Atualização nov/2026
+
+O [guia de estudo](guia-de-estudo.md) desta atualização inclui as aulas novas de MLG para dados de contagem (Poisson e binomial negativa) e de regressão logística. O guia não menciona explicitamente os dados eleitorais da aula-fonte; o trecho abaixo reproduz só o que o guia traz sobre esses temas. O guia completo está em [guia-de-estudo.md](guia-de-estudo.md).
+
+### Questionário (trechos)
+
+8. Por que a acurácia se mostra uma métrica inadequada para diagnosticar a qualidade de modelos de regressão logística em cenários de dados desbalanceados e quais métricas alternativas são recomendadas?
+
+9. Como se diagnostica o fenômeno da sobredispersão em modelos de regressão Poisson e qual distribuição é indicada para contornar essa limitação?
+
+10. Qual é a interpretação prática do coeficiente exponenciado $`\exp(\hat{\beta}_j)`$ em um modelo Poisson com ligação logarítmica comparada à sua interpretação em um modelo de regressão logística?
+
+### Gabarito (trechos)
+
+8. Em bases desbalanceadas, onde a classe majoritária domina a amostra, um classificador simplório que atribua todas as observações à classe majoritária obterá uma acurácia elevada, mas falhará em identificar os eventos da classe minoritária de interesse. Essa métrica gera uma falsa sensação de adequação do ajuste estatístico em problemas como análise de fraude ou inadimplência. Para contornar essa limitação, recomendam-se métricas baseadas na matriz de confusão como o Coeficiente de Correlação de Matthews (MCC), a Média Geométrica (G-Mean) e o índice Kappa de Cohen.
+
+9. A sobredispersão em modelos Poisson ocorre quando a variância empírica dos dados excede a média esperada, sendo identificada por resíduos desalinhados fora das bandas de confiança do gráfico de envelope ou por razões elevadas entre o desvio e os graus de liberdade. Esse desajuste indica que a suposição de igualdade entre média e variância ($`Var(Y) = \mu`$) foi violada. Para corrigi-lo, adota-se o modelo Binomial Negativo, que introduz um parâmetro adicional de dispersão $`\phi`$, expandindo a variância para $`\operatorname{Var}(Y) = \mu + \mu^2 \phi`$.
+
+10. No modelo Poisson com ligação logarítmica, a exponenciação $`\exp(\hat{\beta}_j)`$ representa a Razão de Taxas, indicando que o incremento de uma unidade na covariável $`X_j`$ multiplica a resposta média esperada $`\mu`$ pelo fator $`\exp(\hat{\beta}_j)`$. No modelo de regressão logística, $`\exp(\hat{\beta}_j)`$ corresponde à Razão de Chances (odds ratio), representando o fator multiplicativo sobre a chance de sucesso $`\mu`$/(1-$`\mu`$). Dessa forma, enquanto na Poisson o efeito é multiplicativo direto sobre a taxa esperada, na regressão logística ele atua sobre a razão entre probabilidades de sucesso e fracasso.
+
+### Questões para desenvolvimento (trechos)
+
+4. Analise o problema da sobredispersão em modelos para dados de contagem. Explique as limitações teóricas do modelo Poisson diante da sobredispersão, como a distribuição Binomial Negativa estrutura a sua função de variância para contornar essa deficiência e quais são as consequências inferenciais de se ignorar a sobredispersão em uma análise estatística.
+
+5. Em contextos de classificação binária com dados desbalanceados (como na modelagem de risco de crédito ou detecção de fraudes), discuta por que métricas tradicionais baseadas na acurácia falham. Sintetize as métricas alternativas de desempenho (MCC, G-Mean, Kappa) e discuta os impactos da escolha de funções de ligação alternativas (como probito ou complemento log-log) em relação ao modelo logito convencional.
+
+### Termos do glossário (trechos)
+
+| Termo | Definição |
+|---|---|
+| Acurácia | Proporção total de acertos de um modelo de classificação em relação ao total de observações. Revela-se uma métrica enganosa em conjuntos de dados desbalanceados. |
+| Desvio Nulo (Null Deviance) | Valor da função desvio obtido ao se ajustar o modelo nulo (contendo apenas o termo de intercepto), servindo como base de comparação para medir o ganho de informação trazido pelas covariáveis no modelo proposto. |
+| Função de Ligação ($`g(\mu)`$) | Função monótona e diferenciável que relaciona a média esperada da variável resposta $`\mu_i`$ ao preditor linear $`\eta_i`$, permitindo acomodar restrições no suporte da variável resposta. |
+| Função de Ligação Canônica | Função de ligação para a qual o preditor linear equivale diretamente ao parâmetro natural da família exponencial ($`\eta_i = \theta_i`$). Garante boas propriedades algébricas e a unicidade das estimativas de máxima verossimilhança. |
+| Função Desvio (Deviance) | Estatística de qualidade do ajuste definida por $`2[L(y; y) - L(\hat{\mu}; y)]`$, que mede o quão distante a log-verossimilhança do modelo proposto está da log-verossimilhança do modelo saturado. |
+| Modelo Binomial Negativo | Modelo para dados de contagem que estende a distribuição Poisson ao incorporar um parâmetro extra de dispersão, tornando a variância uma função quadrática da média ($`\operatorname{Var}(Y) = \mu + \mu^2 \phi`$) e corrigindo a sobredispersão. |
+| Modelo Poisson | MLG para dados de contagem que assume a distribuição Poisson para a resposta e utiliza a função de ligação logarítmica, impondo a restrição de equidispersão (Var(Y) = E[Y] = $`\mu`$). |
+| Razão de Chances (Odds Ratio) | Medida de efeito obtida por $`\exp(\hat{\beta}_j)`$ na regressão logística, que expressa como a chance de ocorrência de um evento ($`\mu/(1-\mu)`$) é multiplicada ao se incrementar uma unidade na covariável $`X_j`$. |
+| Razão de Taxas | Medida de efeito obtida por $`\exp(\hat{\beta}_j)`$ no modelo Poisson com ligação logarítmica, indicando o fator multiplicativo sobre a resposta média esperada $`\mu`$ por unidade de incremento na covariável $`X_j`$. |
+| Sobredispersão (Superdispersão) | Fenômeno verificado quando a variância empírica dos dados observados excede a variância teórica prevista pelo modelo probabilístico assumido (frequente em modelos Poisson). |

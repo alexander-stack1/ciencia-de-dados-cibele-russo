@@ -1,6 +1,6 @@
 # 🎬 Vídeos-fonte: Modelos de Regressão
 
-34 vídeos do canal [@CibeleRussoUSP](https://www.youtube.com/@CibeleRussoUSP), organizados por subtema e na sequência das aulas. Todos os direitos dos vídeos pertencem à autora.
+36 vídeos do canal [@CibeleRussoUSP](https://www.youtube.com/@CibeleRussoUSP), organizados por subtema e na sequência das aulas. Todos os direitos dos vídeos pertencem à autora.
 
 | # | Subtema | Título | Duração |
 |---|---|---|---|
@@ -34,9 +34,11 @@
 | 28 | EST5507 Modelos de Regressão (PIPGEs) | [Modelos Lineares - Aplicação mod linear e Estimador de máxima verossimilhança](https://www.youtube.com/watch?v=5Z3ka09LDaw) | 1:14:39 |
 | 29 | EST5507 Modelos de Regressão (PIPGEs) | [Modelos Lineares - Distribuição de formas quadráticas](https://www.youtube.com/watch?v=o8nS0OWj7Pk) | 1:18:25 |
 | 30 | EST5507 Modelos de Regressão (PIPGEs) | [Modelos Lineares - Modelo linear geral com matriz de planejamento de posto completo](https://www.youtube.com/watch?v=5iUitKI7PGk) | 0:50:16 |
-| 31 | Mínimos quadrados na regressão múltipla | [Modelos de regressão- EQM Estimador de mínimos quadrados de B no modelo de regressão linear múltiplo](https://www.youtube.com/watch?v=ecjSj697Tpo) | 0:16:10 |
-| 32 | Regressão logística e resposta binária | [Prática - Modelo de regressão logística e outros modelos para resposta binária](https://www.youtube.com/watch?v=KfjrnaoB8q0) | 1:09:34 |
-| 33 | SME0823 Modelos de Regressão e Aprendizado Supervisionado II | [Modelos de Regressão e Aprendizado Supervisionado II - Estimação de máxima verossimilhança em MLGs](https://www.youtube.com/watch?v=iXxnQLzHXnw) | 1:23:15 |
-| 34 | SME0823 Modelos de Regressão e Aprendizado Supervisionado II | [Modelos de Regressão e Aprendizado Supervisionado II - Modelos para resposta binária](https://www.youtube.com/watch?v=3o3GJJ5jjL8) | 0:21:09 |
+| 31 | EST5507 Modelos de Regressão (PIPGEs) | [EST5507 Modelos de Regressão MLG com resposta binária -  Regressão logística  + dados eleitorais](https://www.youtube.com/watch?v=aGVWcz5Fteo) | 1:04:14 |
+| 32 | EST5507 Modelos de Regressão (PIPGEs) | [EST5507 Modelos de Regressão  - MLGs para contagem - Modelos (log) Poisson e binomial negativa](https://www.youtube.com/watch?v=YzqrNmZyguk) | 1:27:48 |
+| 33 | Mínimos quadrados na regressão múltipla | [Modelos de regressão- EQM Estimador de mínimos quadrados de B no modelo de regressão linear múltiplo](https://www.youtube.com/watch?v=ecjSj697Tpo) | 0:16:10 |
+| 34 | Regressão logística e resposta binária | [Prática - Modelo de regressão logística e outros modelos para resposta binária](https://www.youtube.com/watch?v=KfjrnaoB8q0) | 1:09:34 |
+| 35 | SME0823 Modelos de Regressão e Aprendizado Supervisionado II | [Modelos de Regressão e Aprendizado Supervisionado II - Estimação de máxima verossimilhança em MLGs](https://www.youtube.com/watch?v=iXxnQLzHXnw) | 1:23:15 |
+| 36 | SME0823 Modelos de Regressão e Aprendizado Supervisionado II | [Modelos de Regressão e Aprendizado Supervisionado II - Modelos para resposta binária](https://www.youtube.com/watch?v=3o3GJJ5jjL8) | 0:21:09 |
 
 [↩ Voltar à trilha](README.md)

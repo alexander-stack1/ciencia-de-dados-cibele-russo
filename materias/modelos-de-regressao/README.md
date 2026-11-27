@@ -1,6 +1,6 @@
 # 📈 Modelos de Regressão
 
-![status](https://img.shields.io/badge/status-p%C3%BAblico_%E2%80%94_publicado_com_autoriza%C3%A7%C3%A3o_da_autora-brightgreen) ![vídeos-fonte](https://img.shields.io/badge/v%C3%ADdeos--fonte-34-blue) ![idioma](https://img.shields.io/badge/idioma-portugu%C3%AAs-green) ![licença](https://img.shields.io/badge/licen%C3%A7a-CC_BY--NC--SA_4.0-lightgrey)
+![status](https://img.shields.io/badge/status-p%C3%BAblico_%E2%80%94_publicado_com_autoriza%C3%A7%C3%A3o_da_autora-brightgreen) ![vídeos-fonte](https://img.shields.io/badge/v%C3%ADdeos--fonte-36-blue) ![idioma](https://img.shields.io/badge/idioma-portugu%C3%AAs-green) ![licença](https://img.shields.io/badge/licen%C3%A7a-CC_BY--NC--SA_4.0-lightgrey)
 
 > ✅ **Publicação autorizada pela Profa. Cibele Russo** (ICMC/USP) em 15/10/2026.
 
@@ -13,6 +13,7 @@
 | Arquivo | Conteúdo |
 |---|---|
 | [📘 aulas.md](aulas.md) | Guia/trilha de aulas curtas e didáticas, com fórmulas renderizadas |
+| [📗 guia-de-estudo.md](guia-de-estudo.md) | Guia de estudo gerado no NotebookLM com as aulas novas (nov/2026), com fórmulas renderizadas |
 | [🎬 videos.md](videos.md) | Lista dos vídeos-fonte com links para o YouTube |
 | [🖼️ slides.pdf](slides.pdf) | Apresentação de slides gerada no NotebookLM |
 | [🗂️ por-aula/](por-aula/README.md) | Guia de estudo e slides de cada aula, uma pasta por vídeo |
@@ -20,7 +21,7 @@
 ## 🧭 Roteiro de estudo
 
 1. Assista (ou reveja) os vídeos da professora listados em [videos.md](videos.md).
-2. Leia a aula correspondente em [aulas.md](aulas.md).
+2. Leia a aula correspondente em [aulas.md](aulas.md) (e o [guia de estudo](guia-de-estudo.md) desta atualização).
 3. Revise com os slides e faça os exercícios/quiz do guia.
 
 ## 📚 Aulas da trilha
