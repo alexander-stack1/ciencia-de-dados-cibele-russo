@@ -1,6 +1,6 @@
 # 🎬 Vídeos-fonte: Análise Multivariada e Aprendizado Não-Supervisionado
 
-36 vídeos do canal [@CibeleRussoUSP](https://www.youtube.com/@CibeleRussoUSP), organizados por subtema e na sequência das aulas. Todos os direitos dos vídeos pertencem à autora.
+37 vídeos do canal [@CibeleRussoUSP](https://www.youtube.com/@CibeleRussoUSP), organizados por subtema e na sequência das aulas. Todos os direitos dos vídeos pertencem à autora.
 
 | # | Subtema | Título | Duração |
 |---|---|---|---|
@@ -39,6 +39,7 @@
 | 33 | Discriminação logística | [Análise Multivariada e Aprendizado Não-Supervisionado - Aula11b Função de discriminação logística](https://www.youtube.com/watch?v=c23oAl8JRnA) | 0:10:58 |
 | 34 | Análise de correspondência | [Análise Multivariada e Aprendizado Não-Supervisionado - Aula12a Análise de Correspondência](https://www.youtube.com/watch?v=Z7UMIEUx2xM) | 0:23:54 |
 | 35 | Análise de correspondência | [Análise Multivariada e Aprendizado Não-Supervisionado 12b Análise de Correspondência aplic em Python](https://www.youtube.com/watch?v=hgmLLcgrx-k) | 0:11:40 |
-| 36 | Aula aberta (visão geral do curso) | [Análise Multivariada e Aprendizado Não-Supervisionado - Aula aberta](https://www.youtube.com/watch?v=cDyIRfFG2F8) | 0:55:22 |
+| 36 | Análise de correspondência | [Análise Multivariada Aprendizado Não Supervisionado Aula12e Análise de Correspondência exemplo em R](https://www.youtube.com/watch?v=A0-CO3VYGck) | 0:09:06 |
+| 37 | Aula aberta (visão geral do curso) | [Análise Multivariada e Aprendizado Não-Supervisionado - Aula aberta](https://www.youtube.com/watch?v=cDyIRfFG2F8) | 0:55:22 |
 
 [↩ Voltar à trilha](README.md)
